@@ -25,7 +25,7 @@ public class CheckSubsequence {
     int j = 0;
 
     for (int i = 0; i < n && j < m; i++) {
-      if (s.charAt(i) == s.charAt(j)) {
+      if (s.charAt(i) == subsequence.charAt(j)) {
         j++;
       }
     }
