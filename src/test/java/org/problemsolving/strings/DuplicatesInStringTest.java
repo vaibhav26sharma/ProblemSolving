@@ -9,8 +9,8 @@ import java.io.PrintStream;
 import static org.junit.jupiter.api.Assertions.*;
 
 class DuplicatesInStringTest {
-  DuplicatesInString duplicatesInString = new DuplicatesInString();
-  ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+  private final DuplicatesInString duplicatesInString = new DuplicatesInString();
+  private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
   @BeforeEach
   void setup() {
