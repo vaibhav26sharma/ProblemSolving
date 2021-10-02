@@ -38,18 +38,18 @@ public class CheckSubsequence {
   }
 
   private boolean recursiveCheckSubsequence(String s, String subsequence, int n, int m) {
-    // if m reaches to last element of subsequence then it exists
-    if (m == subsequence.length()) return true;
-    // if n reaches to last element of string s, then subsequence doesn't exist
-    if (n == s.length()) return false;
+    // if m reaches to first element of subsequence then it exists
+    if (m == 0) return true;
+    // if n reaches to first element of string s, then subsequence doesn't exist
+    if (n == 0) return false;
 
-    // Increase both pointers if chars are equal
-    if (s.charAt(i) == subsequence.charAt(j)) {
-      return recursiveCheckSubsequence(s, subsequence, i + 1, j + 1);
+    // Start comparing from last elements and keep on decreasing indices
+    if (s.charAt(n - 1) == subsequence.charAt(m - 1)) {
+      return recursiveCheckSubsequence(s, subsequence, n - 1, m - 1);
     }
     // Increase i only, if unequal
     else {
-      return recursiveCheckSubsequence(s, subsequence, i + 1, j);
+      return recursiveCheckSubsequence(s, subsequence, n - 1, m);
     }
   }
 }

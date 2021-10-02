@@ -9,17 +9,15 @@ class CheckSubsequenceTest {
 
   @Test
   void iterativeCheckSubsequence() {
-    assertTrue(checkSubsequence.recursiveCheckSubsequence("GEEKSFORGEEKS", "GRGES"));
-    assertTrue(checkSubsequence.recursiveCheckSubsequence("KOTTAYAM", "KOTA"));
-    assertTrue(checkSubsequence.recursiveCheckSubsequence("KOTTAYAM", "KOTA"));
-    assertTrue(checkSubsequence.recursiveCheckSubsequence("ABCDE", "AEB"));
+    assertTrue(checkSubsequence.iterativeCheckSubsequence("GEEKSFORGEEKS", "GRGES"));
+    assertTrue(checkSubsequence.iterativeCheckSubsequence("KOTTAYAM", "KOTA"));
+    assertFalse(checkSubsequence.iterativeCheckSubsequence("ABCDE", "AEB"));
   }
 
   @Test
   void recursiveCheckSubsequence() {
     assertTrue(checkSubsequence.recursiveCheckSubsequence("GEEKSFORGEEKS", "GRGES"));
     assertTrue(checkSubsequence.recursiveCheckSubsequence("KOTTAYAM", "KOTA"));
-    assertTrue(checkSubsequence.recursiveCheckSubsequence("KOTTAYAM", "KOTA"));
-    assertTrue(checkSubsequence.recursiveCheckSubsequence("ABCDE", "AEB"));
+    assertFalse(checkSubsequence.recursiveCheckSubsequence("ABCDE", "AEB"));
   }
 }
