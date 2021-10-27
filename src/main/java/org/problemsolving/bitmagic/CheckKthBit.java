@@ -1,7 +1,5 @@
 package org.problemsolving.bitmagic;
 
-import org.problemsolving.utils.BaseConversion;
-
 /**
  * Check if kth bit is set or not
  *
@@ -17,8 +15,10 @@ public class CheckKthBit {
     // Variable for shifting
     int mask = 1 << k;
 
-    // if o/p at Nth bit is 1 then bit is set, else not set
-    if ((num & mask) > 0) return true;
-    else return false;
+    // Negate the shift
+    mask = ~mask; // so that all other bits but kth become 1
+
+    // if o/p of OR is All 1's , that mean Kth bit is set since 1 | 0 = 1
+    return (mask | num) == ~0; // ~0 mean all bits set to 1 i.e. 111
   }
 }
