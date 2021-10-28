@@ -5,7 +5,7 @@ package org.problemsolving.strings;
  * https://www.geeksforgeeks.org/given-two-strings-find-first-string-subsequence-second/
  */
 public class CheckSubsequence {
-  int i, j = 0;
+  // int i, j = 0;
 
   public boolean iterativeCheckSubsequence(String s, String subsequence) {
     return iterativeCheckSubsequence(s, subsequence, s.length(), subsequence.length());

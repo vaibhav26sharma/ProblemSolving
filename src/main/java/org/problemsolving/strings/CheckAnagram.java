@@ -9,8 +9,8 @@ public class CheckAnagram {
 
   public boolean naiveAnagramCheck(String s1, String s2) {
     if (s1.length() != s2.length()) return false;
-    char a[] = s1.toCharArray();
-    char b[] = s2.toCharArray();
+    char[] a = s1.toCharArray();
+    char[] b = s2.toCharArray();
 
     Arrays.sort(a);
     Arrays.sort(b);
@@ -78,7 +78,7 @@ public class CheckAnagram {
   // O(n)
   public boolean efficientCheckAnagramArray(String s1, String s2) {
     if (s1.length() != s2.length()) return false;
-    int count[] = new int[CHAR];
+    int[] count = new int[CHAR];
     for (int i = 0; i < s1.length(); i++) {
       // Index in array will be the ascii value of char
       count[s1.charAt(i)]++;
