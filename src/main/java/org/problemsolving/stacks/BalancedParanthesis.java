@@ -8,7 +8,7 @@ public class BalancedParanthesis {
   public boolean isBalanced(String str) {
     if (str == null || str.length() == 0) return false;
 
-    // Deque works better than stack but has same
+    // Deque works better than stack & has same
     // functionality
     Deque<Character> s = new ArrayDeque<>();
 
